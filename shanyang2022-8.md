@@ -1,0 +1,4 @@
+http=a1.ap.fastqvpn.com:29980, username=282211777368817664, password=d0d0bea0-f747-4c5c-b475-50bf532d6607, over-tls=true, tls-host=a1.ap.fastqvpn.com, tls-verification=true, fast-open=false, udp-relay=false, tag=山羊高速1
+http=a2.ap.fastqvpn.com:29980, username=282211777368817664, password=d0d0bea0-f747-4c5c-b475-50bf532d6607, over-tls=true, tls-host=a2.ap.fastqvpn.com, tls-verification=true, fast-open=false, udp-relay=false, tag=山羊高速2
+http=a3.ap.fastqvpn.com:29980, username=282211777368817664, password=d0d0bea0-f747-4c5c-b475-50bf532d6607, over-tls=true, tls-host=a3.ap.fastqvpn.com, tls-verification=true, fast-open=false, udp-relay=false, tag=山羊高速3
+http=a4.ap.fastqvpn.com:29980, username=282211777368817664, password=d0d0bea0-f747-4c5c-b475-50bf532d6607, over-tls=true, tls-host=a4.ap.fastqvpn.com, tls-verification=true, fast-open=false, udp-relay=false, tag=山羊高速4
