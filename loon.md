@@ -1,4 +1,4 @@
-智能分配 = ShadowsocksR,174.139.137.61,44605,none,"sealnet+305",auth_chain_a,{},plain,{}
+
 移动优化 = ShadowsocksR,174.139.137.61,44605,none,"sealnet+305",auth_chain_a,{},plain,{}
 电信优化 = ShadowsocksR,174.139.137.61,44605,none,"sealnet+305",auth_chain_a,{},plain,{}
 台湾 = ShadowsocksR,174.139.137.61,44605,none,"sealnet+305",auth_chain_a,{},plain,{}
