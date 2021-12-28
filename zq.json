@@ -1,49 +1,49 @@
 {
-  "name": "中青重写订阅",
+  "name": "IOS中青重写订阅",
   "author": "xiaodan01",
-  "mitmhost": ["*.youth.cn"],
+  "mitmhost": ["*.youth.cn", "kandian.wkandian.com", "kd.youth.cn", "ios.baertt.com"],
   "rewrite": [
     {
-      "match": "https://ant.xunsl.com/v5/article/info.json",
-      "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcwz.js",
+      "match": "^https?://ios\.baertt\.com/v5/article/complete",
+      "target": "https://raw.githubusercontent.com/ztxtop/x/main/zqread.js",
       "enable": true
     },
     {
-      "match": "https://ant.xunsl.com/v5/article/detail.json",
-      "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcwz.js",
+      "match": "^https?://ios\.baertt\.com/v5/user/app_stay\.json",
+      "target": "https://raw.githubusercontent.com/ztxtop/x/main/zqread.js",
       "enable": true
     },
     {
-      "match": "https://ant.xunsl.com/v5/nameless/adlickstart.json",
-      "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jckkz.js",
+      "match": "^https?://\w+\.youth\.cn/(TaskCenter|WebApi/NewTaskIos)/(sign|getSign)(\?.+)?$",
+      "target": "https://raw.githubusercontent.com/ztxtop/x/main/zqread.js",
       "enable": true
     }, 
     {
-      "match": "https://ant.xunsl.com/v5/CommonReward/toGetReward.json",
-      "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcqd.js",
+      "match": "^https?://(ios\.baertt|kandian\.wkandian)\.com/v5/Nameless/adlickstart\.json",
+      "target": "https://raw.githubusercontent.com/ztxtop/x/main/youth_banner.js",
       "enable": true
     },
     {
-      "match": "https://ant.xunsl.com/v5/CommonReward/toGetReward.json",
-      "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcbox.js",
+      "match": "^https?://(ios\.baertt|kandian\.wkandian)\.com\/v5\/task/browse_start\.json",
+      "target": "https://raw.githubusercontent.com/ztxtop/x/main/youth_banner.js",
       "enable": true
     }
     ,
     {
-      "match": "https://ant.xunsl.com/v5/user/stay.json",
-      "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jcwz.js",
+      "match": "^https?://(ios\.baertt|kandian\.wkandian)\.com/v5/user/app_stay\.json",
+      "target": "https://raw.githubusercontent.com/ztxtop/x/main/youth_banner.js",
       "enable": true
     }
     ,
     {
-      "match": "https://ant.xunsl.com/v5/wechat/withdraw2.json",
-      "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jc_withdraw.js",
+      "match": "^https?://(ios\.baertt|kandian\.wkandian)\.com/v5/article/(info/get|info|detail)\.json",
+      "target": "https://raw.githubusercontent.com/ztxtop/x/main/zqread.js",
       "enable": true
     }
     ,
     {
-      "match": "https://ant.xunsl.com/v17/NewTask/getTaskList.json",
-      "target": "https://raw.githubusercontent.com/shaolin-kongfu/js_scripts/main/jc_today_score.js",
+      "match": "^https://kd\.youth\.cn/WebApi/NewTaskIos/getTaskList",
+      "target": "https://raw.githubusercontent.com/ztxtop/x/main/youth_banner.js",
       "enable": true
     }
   ]
