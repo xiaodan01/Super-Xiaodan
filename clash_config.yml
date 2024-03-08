@@ -1,3 +1,4 @@
+mixed-port: '7890'
 proxies:
 - cipher: chacha20
   name: 5pel5pys6auY6YCfIDFb5pmu6YCaXQ
@@ -9,7 +10,7 @@ proxies:
     tls: true
   port: 50120
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5pel5pys6auY6YCfIDJb5pmu6YCaXQ
   password: mPQ5C9
@@ -20,7 +21,7 @@ proxies:
     tls: true
   port: 50121
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5pel5pys6auY6YCfIDNb5pmu6YCaXQ
   password: mPQ5C9
@@ -31,7 +32,7 @@ proxies:
     tls: true
   port: 50122
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5pel5pys6auY6YCfIDRb5pmu6YCaXQ
   password: mPQ5C9
@@ -42,7 +43,7 @@ proxies:
     tls: true
   port: 50123
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5pel5pys6auY6YCfIDVb5pmu6YCaXQ
   password: mPQ5C9
@@ -53,7 +54,7 @@ proxies:
     tls: true
   port: 50124
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5pel5pys6auY6YCfIDZb5pmu6YCaXQ
   password: mPQ5C9
@@ -64,7 +65,7 @@ proxies:
     tls: true
   port: 50125
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5pel5pys6auY6YCfIDdb5pmu6YCaXQ
   password: mPQ5C9
@@ -75,7 +76,7 @@ proxies:
     tls: true
   port: 50126
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5pel5pys6auY6YCfIDhb5pmu6YCaXQ
   password: mPQ5C9
@@ -86,7 +87,7 @@ proxies:
     tls: true
   port: 50127
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5pel5pys6auY6YCfIDlb5pmu6YCaXQ
   password: mPQ5C9
@@ -97,7 +98,7 @@ proxies:
     tls: true
   port: 50128
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5pel5pys6auY6YCfIDEwW-aZrumAml0
   password: mPQ5C9
@@ -108,7 +109,7 @@ proxies:
     tls: true
   port: 50129
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5pel5pys6auY6YCfIDExW-aZrumAml0
   password: mPQ5C9
@@ -119,7 +120,7 @@ proxies:
     tls: true
   port: 50130
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5pel5pys6auY6YCfIDEyW-aZrumAml0
   password: mPQ5C9
@@ -130,7 +131,7 @@ proxies:
     tls: true
   port: 50131
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5pel5pys6auY6YCfIDEzW-aZrumAml0
   password: mPQ5C9
@@ -141,7 +142,7 @@ proxies:
     tls: true
   port: 50132
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5pel5pys6auY6YCfIDE0W-aZrumAml0
   password: mPQ5C9
@@ -152,7 +153,7 @@ proxies:
     tls: true
   port: 50133
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5pel5pys6auY6YCfIDE1W-aZrumAml0
   password: mPQ5C9
@@ -163,7 +164,7 @@ proxies:
     tls: true
   port: 50134
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5pel5pys6auY6YCfIDE2W-aZrumAml0
   password: mPQ5C9
@@ -174,7 +175,7 @@ proxies:
     tls: true
   port: 50135
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5paw5Yqg5Z2h6auY6YCfIDE3W-aZrumAml0
   password: mPQ5C9
@@ -185,7 +186,7 @@ proxies:
     tls: true
   port: 50136
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5paw5Yqg5Z2h6auY6YCfIDE4W-aZrumAml0
   password: mPQ5C9
@@ -196,7 +197,7 @@ proxies:
     tls: true
   port: 50137
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5paw5Yqg5Z2h6auY6YCfIDE5W-aZrumAml0
   password: mPQ5C9
@@ -207,7 +208,7 @@ proxies:
     tls: true
   port: 50138
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5paw5Yqg5Z2h6auY6YCfIDIwW-aZrumAml0
   password: mPQ5C9
@@ -218,7 +219,7 @@ proxies:
     tls: true
   port: 50139
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: TE9MIOaJi-a4uOWKoOmAn1tWSVBd
   password: mPQ5C9
@@ -229,7 +230,7 @@ proxies:
     tls: true
   port: 30420
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 6aaZ5riv6auY6YCfMVtWSVBd
   password: mPQ5C9
@@ -240,7 +241,7 @@ proxies:
     tls: true
   port: 30520
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 6aaZ5riv6auY6YCfMltWSVBd
   password: mPQ5C9
@@ -251,7 +252,7 @@ proxies:
     tls: true
   port: 40155
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 6aaZ5riv6auY6YCfM1tWSVBd
   password: mPQ5C9
@@ -262,7 +263,7 @@ proxies:
     tls: true
   port: 30522
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 6aaZ5riv6auY6YCfNFtWSVBd
   password: mPQ5C9
@@ -273,7 +274,7 @@ proxies:
     tls: true
   port: 30523
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 6aaZ5riv6auY6YCfNVtWSVBd
   password: mPQ5C9
@@ -284,7 +285,7 @@ proxies:
     tls: true
   port: 30524
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 6aaZ5riv6auY6YCfNltWSVBd
   password: mPQ5C9
@@ -295,7 +296,7 @@ proxies:
     tls: true
   port: 30525
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 6aaZ5riv6auY6YCfN1tWSVBd
   password: mPQ5C9
@@ -306,7 +307,7 @@ proxies:
     tls: true
   port: 30526
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 6aaZ5riv6auY6YCfOFtWSVBd
   password: mPQ5C9
@@ -317,7 +318,7 @@ proxies:
     tls: true
   port: 30527
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 6aaZ5riv6auY6YCfOVtWSVBd
   password: mPQ5C9
@@ -328,7 +329,7 @@ proxies:
     tls: true
   port: 30528
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5paw5Yqg5Z2h6auY6YCfMVtWSVBd
   password: mPQ5C9
@@ -339,7 +340,7 @@ proxies:
     tls: true
   port: 20320
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5paw5Yqg5Z2h6auY6YCfMltWSVBd
   password: mPQ5C9
@@ -350,7 +351,7 @@ proxies:
     tls: true
   port: 30321
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5paw5Yqg5Z2h6auY6YCfM1tWSVBd
   password: mPQ5C9
@@ -361,7 +362,7 @@ proxies:
     tls: true
   port: 30322
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5paw5Yqg5Z2h6auY6YCfNFtWSVBd
   password: mPQ5C9
@@ -372,7 +373,7 @@ proxies:
     tls: true
   port: 30323
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5paw5Yqg5Z2h6auY6YCfNVtWSVBd
   password: mPQ5C9
@@ -383,7 +384,7 @@ proxies:
     tls: true
   port: 30324
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5Y-w5YyX6auY6YCfMVtWSVBd
   password: mPQ5C9
@@ -394,7 +395,7 @@ proxies:
     tls: true
   port: 30220
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5Y-w5YyX6auY6YCfMltWSVBd
   password: mPQ5C9
@@ -405,7 +406,7 @@ proxies:
     tls: true
   port: 30221
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5Y-w5YyX6auY6YCfM1tWSVBd
   password: mPQ5C9
@@ -416,7 +417,7 @@ proxies:
     tls: true
   port: 30222
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5Y-w5YyX6auY6YCfNFtWSVBd
   password: mPQ5C9
@@ -427,7 +428,7 @@ proxies:
     tls: true
   port: 30223
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5Y-w5YyX6auY6YCfNVtWSVBd
   password: mPQ5C9
@@ -438,7 +439,7 @@ proxies:
     tls: true
   port: 30224
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5pel5pys6auY6YCfIDFbVklQXQ
   password: mPQ5C9
@@ -449,7 +450,7 @@ proxies:
     tls: true
   port: 40320
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5pel5pys6auY6YCfIDJbVklQXQ
   password: mPQ5C9
@@ -460,7 +461,7 @@ proxies:
     tls: true
   port: 40321
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5pel5pys6auY6YCfIDNbVklQXQ
   password: mPQ5C9
@@ -471,7 +472,7 @@ proxies:
     tls: true
   port: 40322
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5pel5pys6auY6YCfIDRbVklQXQ
   password: mPQ5C9
@@ -482,7 +483,7 @@ proxies:
     tls: true
   port: 40323
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 5pel5pys6auY6YCfIDVbVklQXQ
   password: mPQ5C9
@@ -493,7 +494,7 @@ proxies:
     tls: true
   port: 40324
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
 - cipher: chacha20
   name: 576O5Zu96auY6YCfW1ZJUF0
   password: mPQ5C9
@@ -504,4 +505,56 @@ proxies:
     tls: true
   port: 40220
   server: dccm.ix2.edge.kunlunae.com
-  type: ssr
+  type: ss
+proxy-groups:
+- name: Proxy
+  proxies:
+  - 5pel5pys6auY6YCfIDFb5pmu6YCaXQ
+  - 5pel5pys6auY6YCfIDJb5pmu6YCaXQ
+  - 5pel5pys6auY6YCfIDNb5pmu6YCaXQ
+  - 5pel5pys6auY6YCfIDRb5pmu6YCaXQ
+  - 5pel5pys6auY6YCfIDVb5pmu6YCaXQ
+  - 5pel5pys6auY6YCfIDZb5pmu6YCaXQ
+  - 5pel5pys6auY6YCfIDdb5pmu6YCaXQ
+  - 5pel5pys6auY6YCfIDhb5pmu6YCaXQ
+  - 5pel5pys6auY6YCfIDlb5pmu6YCaXQ
+  - 5pel5pys6auY6YCfIDEwW-aZrumAml0
+  - 5pel5pys6auY6YCfIDExW-aZrumAml0
+  - 5pel5pys6auY6YCfIDEyW-aZrumAml0
+  - 5pel5pys6auY6YCfIDEzW-aZrumAml0
+  - 5pel5pys6auY6YCfIDE0W-aZrumAml0
+  - 5pel5pys6auY6YCfIDE1W-aZrumAml0
+  - 5pel5pys6auY6YCfIDE2W-aZrumAml0
+  - 5paw5Yqg5Z2h6auY6YCfIDE3W-aZrumAml0
+  - 5paw5Yqg5Z2h6auY6YCfIDE4W-aZrumAml0
+  - 5paw5Yqg5Z2h6auY6YCfIDE5W-aZrumAml0
+  - 5paw5Yqg5Z2h6auY6YCfIDIwW-aZrumAml0
+  - TE9MIOaJi-a4uOWKoOmAn1tWSVBd
+  - 6aaZ5riv6auY6YCfMVtWSVBd
+  - 6aaZ5riv6auY6YCfMltWSVBd
+  - 6aaZ5riv6auY6YCfM1tWSVBd
+  - 6aaZ5riv6auY6YCfNFtWSVBd
+  - 6aaZ5riv6auY6YCfNVtWSVBd
+  - 6aaZ5riv6auY6YCfNltWSVBd
+  - 6aaZ5riv6auY6YCfN1tWSVBd
+  - 6aaZ5riv6auY6YCfOFtWSVBd
+  - 6aaZ5riv6auY6YCfOVtWSVBd
+  - 5paw5Yqg5Z2h6auY6YCfMVtWSVBd
+  - 5paw5Yqg5Z2h6auY6YCfMltWSVBd
+  - 5paw5Yqg5Z2h6auY6YCfM1tWSVBd
+  - 5paw5Yqg5Z2h6auY6YCfNFtWSVBd
+  - 5paw5Yqg5Z2h6auY6YCfNVtWSVBd
+  - 5Y-w5YyX6auY6YCfMVtWSVBd
+  - 5Y-w5YyX6auY6YCfMltWSVBd
+  - 5Y-w5YyX6auY6YCfM1tWSVBd
+  - 5Y-w5YyX6auY6YCfNFtWSVBd
+  - 5Y-w5YyX6auY6YCfNVtWSVBd
+  - 5pel5pys6auY6YCfIDFbVklQXQ
+  - 5pel5pys6auY6YCfIDJbVklQXQ
+  - 5pel5pys6auY6YCfIDNbVklQXQ
+  - 5pel5pys6auY6YCfIDRbVklQXQ
+  - 5pel5pys6auY6YCfIDVbVklQXQ
+  - 576O5Zu96auY6YCfW1ZJUF0
+  type: select
+proxy-provider: {}
+rules: []
