@@ -9,7 +9,7 @@
 # TOTAL: 30
 HOST,netease.ugcvideoss.ourdvs.com,NetEaseMusic
 HOST,163yun.com,NetEaseMusic
-HOST-SUFFIX,api.iplay.163.com,NetEaseMusic
+HOST,api.iplay.163.com,NetEaseMusic
 HOST,hz.netease.com,NetEaseMusic
 HOST,mam.netease.com,NetEaseMusic
 HOST,music.126.com,NetEaseMusic
