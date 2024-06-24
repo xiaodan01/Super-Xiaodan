@@ -78,6 +78,7 @@ async function GetCookie() {
 
       // 使用 find() 方法找到与 pin 匹配的对象，以新增或更新用户 WSKEY
       const user = $.wskeyList.find(user => user.userName === $.jd_temp['pin']);
+      /*
       if (user) {
         if (user.cookie == $.cookie) {
           $.log(`⚠️ 当前 WSKEY 与缓存一致, 结束运行。`);
@@ -89,6 +90,7 @@ async function GetCookie() {
         $.log(`🆕 新增用户 WSKEY: ${$.cookie}`);
         $.wskeyList.push({ "userName": $.jd_temp?.['pin'], "cookie": $.cookie });
       }
+      */
     }
   } catch (e) {
     $.log("❌ 用户数据获取失败"), $.log(e);
