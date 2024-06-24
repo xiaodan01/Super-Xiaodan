@@ -1,6 +1,30 @@
 /*
+脚本名称：京东 WSKEY
+更新时间：2024-05-27
+使用方法：划掉后台重新打开 京东APP 即可自动抓取 WSKEY。抓完 WSKEY 不能在京东 app 点退出登录（会导致 WSKEY 失效），切换账号的正确姿势是先断网（飞行模式）再点击退出登录，划掉后台重新打开 APP 再登录新的账号。
+注意事项：脚本抓取的 WSKEY 默认自动提交到服务器（自动上车），可通过 BoxJs 设置关闭自动提交功能。
+重写订阅：https://raw.githubusercontent.com/FoKit/Scripts/main/rewrite/get_jd_wskey.sgmodule
+BoxJs订阅：https://raw.githubusercontent.com/FoKit/Scripts/main/boxjs/fokit.boxjs.json
 
-重写订阅：https://raw.githubusercontent.com/xiaodan01/Super-Xiaodan/main/get_jd_wskey.conf
+------------------ Surge 配置 ------------------
+
+[Script]
+京东 WSKEY = type=http-request,pattern=https:\/\/blackhole\.m\.jd\.com\/getinfo,requires-body=0,max-size=0,binary-body-mode=0,timeout=30,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/get_jd_wskey.js,script-update-interval=0
+
+京东 PIN = type=http-request,pattern=https:\/\/perf\.m\.jd\.com\/app_monitor\/v2\/getRule,requires-body=0,max-size=0,binary-body-mode=0,timeout=30,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/get_jd_wskey.js,script-update-interval=0
+
+[MITM]
+hostname = %APPEND% blackhole.m.jd.com, perf.m.jd.com
+
+------------------- Loon 配置 -------------------
+
+[MITM]
+hostname = blackhole.m.jd.com, perf.m.jd.com
+
+[Script]
+http-request https:\/\/blackhole\.m\.jd\.com\/getinfo tag=京东 WSKEY,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/get_jd_wskey.js,requires-body=0
+
+http-request https:\/\/perf\.m\.jd\.com\/app_monitor\/v2\/getRule tag=京东 PIN,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/get_jd_wskey.js,requires-body=0
 
 --------------- Quantumult X 配置 ---------------
 
@@ -9,30 +33,34 @@ hostname = blackhole.m.jd.com, perf.m.jd.com
 
 [rewrite_local]
 
-https:\/\/blackhole\.m\.jd\.com\/getinfo url script-request-header https://raw.githubusercontent.com/xiaodan01/Super-Xiaodan/main/get_jd_wskey.js
+https:\/\/blackhole\.m\.jd\.com\/getinfo url script-request-header https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/get_jd_wskey.js
 
-https:\/\/perf\.m\.jd\.com\/app_monitor\/v2\/getRule url script-request-header https://raw.githubusercontent.com/xiaodan01/Super-Xiaodan/main/get_jd_wskey.js
+https:\/\/perf\.m\.jd\.com\/app_monitor\/v2\/getRule url script-request-header https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/get_jd_wskey.js
 
 ------------------------------------------------
  */
+
 const $ = new Env('京东 WSKEY');
+$.jd_tempKey = 'jd_temp', $.wskeyKey = 'wskeyList';  // 缓存键名
 $.is_debug = $.getdata('is_debug') || 'false';  // 调试模式
 $.Messages = [], $.cookie = '';  // 初始化数据
 
 // 脚本执行入口
 !(async () => {
-  if (typeof $request !== `undefined`) {
-    await GetCookie();
-    if ($.cookie) {
-      $.Messages.push(`🎉 WSKEY 获取成功\n${$.cookie}`);
-    }
+if (typeof $request !== `undefined`) {
+  await GetCookie();
+  if ($.cookie) {
+    $.Messages.push(`🎉 WSKEY 获取成功\n${$.cookie}`);
+ //   $.setjson($.wskeyList, $.wskeyKey);  // 写入数据持久化
   }
+}
+
 })()
   .catch((e) => $.Messages.push(e.message || e) && $.logErr(e))
   .finally(async () => {
     await sendMsg($.Messages.join('\n').trimStart().trimEnd());  // 推送通知
     $.done();
-  });
+  })
 
 // 获取用户数据
 async function GetCookie() {
@@ -42,12 +70,50 @@ async function GetCookie() {
     const [, wskey] = headers?.cookie.match(/wskey=([^=;]+?);/) || '';
     const [, pin] = headers?.cookie.match(/pin=([^=;]+?);/) || '';
 
-    if (wskey && pin) {
-      $.cookie = `pin=${pin};wskey=${wskey};`;
+    // 延迟读取缓存
+    if ($request.url.includes('/getRule')) await $.wait(3e3);
+
+    // 读取缓存数据
+    $.jd_temp = $.getjson($.jd_tempKey) || {};  // 临时缓存
+    $.wskeyList = $.getjson($.wskeyKey) || [];  // WSKEY 缓存
+
+    // 清理过期缓存数据
+    if ($.jd_temp?.['ts'] && Date.now() - $.jd_temp['ts'] >= 15e3) {
+      $.log(`🆑 清理过期缓存数据`);
+      $.jd_temp = {};
+    }
+
+    // 写入缓存
+    if (wskey) {
       $.log(`wskey: ${wskey}`);
+      $.jd_temp['wskey'] = wskey;
+      $.jd_temp['ts'] = Date.now();
+      $.setjson($.jd_temp, $.jd_tempKey); // 写入新的 wskey
+    } else if (pin) {
       $.log(`pin: ${pin}`);
-    } else {
-      $.log("❌ wskey 或 pin 获取失败");
+      $.jd_temp['pin'] = pin;
+      $.jd_temp['ts'] = Date.now();
+      $.setjson($.jd_temp, $.jd_tempKey); // 写入新的 pin
+    }
+
+    // 拼接 wskey
+    if ($.jd_temp?.['wskey'] && $.jd_temp?.['pin']) {
+      $.cookie = `pin=${$.jd_temp['pin']};wskey=${$.jd_temp['wskey']};`;
+/*
+      // 使用 find() 方法找到与 pin 匹配的对象，以新增或更新用户 WSKEY
+      const user = $.wskeyList.find(user => user.userName === $.jd_temp['pin']);
+      if (user) {
+        if (user.cookie == $.cookie) {
+          $.log(`⚠️ 当前 WSKEY 与缓存一致, 结束运行。`);
+          $.done();  // WSKEY 无变化结束运行
+        }
+        $.log(`♻️ 更新用户 WSKEY: ${$.cookie}`);
+        user.cookie = $.cookie;
+      } else {
+        $.log(`🆕 新增用户 WSKEY: ${$.cookie}`);
+        $.wskeyList.push({ "userName": $.jd_temp?.['pin'], "cookie": $.cookie });
+      }
+      */
     }
   } catch (e) {
     $.log("❌ 用户数据获取失败"), $.log(e);
