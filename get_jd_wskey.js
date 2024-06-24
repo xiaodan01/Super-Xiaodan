@@ -16,7 +16,6 @@ https:\/\/perf\.m\.jd\.com\/app_monitor\/v2\/getRule url script-request-header h
 ------------------------------------------------
  */
 const $ = new Env('京东 WSKEY');
-$.wskeyKey = 'wskeyList';  // 缓存键名
 $.is_debug = $.getdata('is_debug') || 'false';  // 调试模式
 $.Messages = [], $.cookie = '';  // 初始化数据
 
@@ -26,7 +25,6 @@ $.Messages = [], $.cookie = '';  // 初始化数据
     await GetCookie();
     if ($.cookie) {
       $.Messages.push(`🎉 WSKEY 获取成功\n${$.cookie}`);
-      $.setjson($.wskeyList, $.wskeyKey);  // 写入数据持久化
     }
   }
 })()
@@ -44,23 +42,12 @@ async function GetCookie() {
     const [, wskey] = headers?.cookie.match(/wskey=([^=;]+?);/) || '';
     const [, pin] = headers?.cookie.match(/pin=([^=;]+?);/) || '';
 
-    // 写入缓存
     if (wskey && pin) {
       $.cookie = `pin=${pin};wskey=${wskey};`;
       $.log(`wskey: ${wskey}`);
       $.log(`pin: ${pin}`);
-
-      // 新增或更新用户 WSKEY
-      $.wskeyList = $.getjson($.wskeyKey) || [];
-      const userIndex = $.wskeyList.findIndex(user => user.userName === pin);
-
-      if (userIndex !== -1) {
-        $.log(`♻️ 更新用户 WSKEY: ${$.cookie}`);
-        $.wskeyList[userIndex].cookie = $.cookie;
-      } else {
-        $.log(`🆕 新增用户 WSKEY: ${$.cookie}`);
-        $.wskeyList.push({ "userName": pin, "cookie": $.cookie });
-      }
+    } else {
+      $.log("❌ wskey 或 pin 获取失败");
     }
   } catch (e) {
     $.log("❌ 用户数据获取失败"), $.log(e);
