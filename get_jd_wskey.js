@@ -50,7 +50,7 @@ $.Messages = [], $.cookie = '';  // 初始化数据
 if (typeof $request !== `undefined`) {
   await GetCookie();
   if ($.cookie) {
-    $.Messages.push(`🎉 WSKEY 获取成功\n${$.cookie}`);
+    $.Messages.push(`WSKEY 获取成功\n${$.cookie}`);
  //   $.setjson($.wskeyList, $.wskeyKey);  // 写入数据持久化
   }
 }
