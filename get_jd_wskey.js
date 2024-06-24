@@ -74,7 +74,7 @@ async function GetCookie() {
 
     // 拼接 wskey
     if ($.jd_temp?.['wskey'] && $.jd_temp?.['pin']) {
-      $.cookie = `wskey=${$.jd_temp['wskey']}; pin=${$.jd_temp['pin']};`;
+      $.cookie = `pin=${$.jd_temp['pin']};wskey=${$.jd_temp['wskey']};`;
 
       // 使用 find() 方法找到与 pin 匹配的对象，以新增或更新用户 WSKEY
       const user = $.wskeyList.find(user => user.userName === $.jd_temp['pin']);
